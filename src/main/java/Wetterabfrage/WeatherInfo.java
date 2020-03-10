@@ -29,7 +29,10 @@ public class WeatherInfo {
     public static float celsiusCasting(String kelvinTemperature) {
         float kelvin = Float.parseFloat(kelvinTemperature);
         float celsius = kelvin - 273;
-        return celsius;
+
+        float roundCelsius = (float) Math.round(celsius * 100) / 100;
+
+        return roundCelsius;
     }
 
 
